@@ -122,6 +122,10 @@ The file `parameters.json` has to be set-up for each specific use case. This is 
 We recommend that inexperienced users keep advanced parameters set to their `default` values. However, all parameters can be adjusted as needed. 
 
 ## Modules
+
+<div style="display: flex; justify-content: space-between;">
+  <div style="flex: 2; padding: 0px;">
+
 ### Module 0 - MOD0
 This module is a *k*-means clustering tool to select the representatives unary cores, binary cores, and complexes. This module uses the eigenvalues of the Coulomb matrix of the provided structures to select a set of representative ones.
 
@@ -133,33 +137,36 @@ In this module, unary cores are generated, processed, analyzed, and clustered. W
 Here, permutations (i.e., all possible or user-specified) are performed in the atomic species of each of the selected unary cores. The binary cores are subsequently checked for integrity and clustered by *k*-means if the `RUN_MOD_ZERO` flag is activated.
 
 ### Module 3 - MOD3.
-
 Module responsable to distribute the ligands around the selected binary cores. The ligands XYZ are imported from `ligands/` folder. Several ligands might be used in the process. Their orientation regarding the core is controled by the user, which can select a random  or specific orientation (provided by a set of base atoms). An overlap filter iteratively excludes structures with overlapping atoms (integrity). The default threshold is set to t=`1.25`, and can be manually tuned. The filtered complexes are again clustered by *k*-means if the `RUN_MOD_ZERO` flag is activated. Finally, the selected structures are the representatives within the living library family of structures, and can be externally optimized using methods such as Density Functional Theory.
 
 *NOTE:* Energy calculations must be done externally and can be automated using appropriate quantum chemistry software such as FHI-aims, CREST, VASP, or ADF.
 
 
+  </div>
+  <div style="flex: 1; padding: 20px;">
+
+![Example Image](/misc/flowchart.png)
+
+  </div>
+</div>
+
+
 ## Example
 
----
+### Sample inputs and outputs
 
-#**DIDN'T CHANGED AFTER THAT** 
+We provided a ZIP file (Example_Cu8Al6Cps6) with a main folder that contains the cluster_assembler code and all related files and folders, the input, and the outputs for the test case of the [Cu8Al6](Cp*)6 complex. The folders are already named as the default values in main.py, i.e., /Mod01, /Mod02, and /Mod03 for Module 1, Module 2, and Module 3, respectively. You can directly execute the cluster_assembler code in that folder and follow the default options and the given parameters.json input to reproduce the data. The pre-generated frames were obtained from Cu14 and Al14 structures and can be found in /Mod01, while the binary Cu8Al6  cores are found in /Mod02.
 
+### Example Running
 
+For generating the binary cores, the maximum number of permutations was taken into account and Mod0 was used ([200,300,10]) to obtain the representative ones (k=200). They were optimized with DFT at a light level, and the optimized structures are available in /Cu8Al6_structures_optimized. The Cp* ligands were previously rearranged and oriented ([0,1,2]) around the 197 binary cores within a distance of 2.5 Å. The number of configurations set was 10250 to achieve ~2 million trial structures that were filtered and further reduced to 300 with Mod0 (k=300). All other parameters were set to default values. The initial trial structures are found in /Mod03, while the optimized ones with DFT at the light level are available in /Cu8Al6Cps6_structures_optimized.
 
-## Sample inputs and outputs
+After DFT, the family of [Cu8Al6](Cp*)6 complexes was carefully evaluated, and Mod0 was used to reduce to the 15 representative [Cu8Al6](Cp*)6 complexes depicted in the available figure.
 
-CuZn2 + Cp*3
-
-
-We provided a ZIP file (`Cu3Zn4Cp5.zip`, in two parts) with a folder that contains both the code, the inputs, and the outputs for the test case of Cu3Zn4Cp5 complex. The folders are already named as the default values at `main.py`. You can directly execute the `main.py` on that folder and follow the default options and the given INPUT_Cu3Zn4Cp5 to reproduce the data. 
-In Step 1, the pre-generated structures can be found in the folder `all_xyz`. 
-
-Additionally, we provided another ZIP file (`sample_step_9.zip`) for testing the advanced option for Step 9. The folder contains a sample of `data_2`and the `/final_representatives` for the test case of Cu3Zn4Cp5. The result for Step 10 for 15 representatives Cu3Zn4Cp5 structures is also available in the `\to_dft_tight` folder.  
-
-The code was originally tested in Ubuntu 20.04 system but should be compatible with any Linux distribution. The time-consuming part of the workflow is the quantum chemistry calculation, i.e., Steps 7 and 10, which are related to the cluster nature, HPC facilities, and the used quantum chemistry program package.
-
-
-*HAVE FUN and, if our codes were useful for you, remember to cite our work!*
-
+The code was originally tested on an Ubuntu 22.04.03 system but should be compatible with any Linux distribution. The time-consuming part of the workflow is the quantum chemistry calculation, which is related to the cluster nature, HPC facilities, and the used quantum chemistry program package. All DFT calculations were performed with the FHI-aims program at the PBE-TS-vdw/light-tier1 level.
+ 
 ## How to cite
+
+HAVE FUN and if you have found our codes useful in your research, please remember to cite our work using the following reference:
+
+REF:
