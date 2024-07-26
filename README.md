@@ -122,7 +122,6 @@ The file `parameters.json` has to be set-up for each specific use case. This is 
 We recommend that inexperienced users keep advanced parameters set to their `default` values. However, all parameters can be adjusted as needed. 
 
 ## Modules
-
 <div style="display: flex; justify-content: space-between;">
   <div style="flex: 2; padding: 0px;">
 
@@ -155,13 +154,13 @@ Module responsable to distribute the ligands around the selected binary cores. T
 
 ### Sample inputs and outputs
 
-We provided a ZIP file (Example_Cu8Al6Cps6) with a main folder that contains the cluster_assembler code and all related files and folders, the input, and the outputs for the test case of the [Cu8Al6](Cp*)6 complex. The folders are already named as the default values in main.py, i.e., /Mod01, /Mod02, and /Mod03 for Module 1, Module 2, and Module 3, respectively. You can directly execute the cluster_assembler code in that folder and follow the default options and the given parameters.json input to reproduce the data. The pre-generated frames were obtained from Cu14 and Al14 structures and can be found in /Mod01, while the binary Cu8Al6  cores are found in /Mod02.
+We provided a ZIP file (Example_Cu8Al6Cps6) with a main folder that contains the cluster_assembler code and all related files and folders, the input, and the outputs for the test case of the \[Cu<sub>8</sub>Al<sub>6</sub>\](Cp*)<sub>6</sub> complex. The folders are already named as the default values in main.py, i.e., /Mod01, /Mod02, and /Mod03 for Module 1, Module 2, and Module 3, respectively. You can directly execute the cluster_assembler code in that folder and follow the default options and the given parameters.json input to reproduce the data. The pre-generated frames were obtained from Cu<sub>14</sub> and Al<sub>14</sub> structures and can be found in /Mod01, while the binary Cu<sub>8</sub>Al<sub>6</sub> cores are found in /Mod02.
 
 ### Example Running
 
 For generating the binary cores, the maximum number of permutations was taken into account and Mod0 was used ([200,300,10]) to obtain the representative ones (k=200). They were optimized with DFT at a light level, and the optimized structures are available in /Cu8Al6_structures_optimized. The Cp* ligands were previously rearranged and oriented ([0,1,2]) around the 197 binary cores within a distance of 2.5 Å. The number of configurations set was 10250 to achieve ~2 million trial structures that were filtered and further reduced to 300 with Mod0 (k=300). All other parameters were set to default values. The initial trial structures are found in /Mod03, while the optimized ones with DFT at the light level are available in /Cu8Al6Cps6_structures_optimized.
 
-After DFT, the family of [Cu8Al6](Cp*)6 complexes was carefully evaluated, and Mod0 was used to reduce to the 15 representative [Cu8Al6](Cp*)6 complexes depicted in the available figure.
+After DFT, the family of \[Cu<sub>8</sub>Al<sub>6</sub>\](Cp*)<sub>6</sub> complexes was carefully evaluated, and Mod0 was used to reduce to the 15 representative \[Cu<sub>8</sub>Al<sub>6</sub>\](Cp*)<sub>6</sub> complexes depicted in the available figure.
 
 The code was originally tested on an Ubuntu 22.04.03 system but should be compatible with any Linux distribution. The time-consuming part of the workflow is the quantum chemistry calculation, which is related to the cluster nature, HPC facilities, and the used quantum chemistry program package. All DFT calculations were performed with the FHI-aims program at the PBE-TS-vdw/light-tier1 level.
  
@@ -169,4 +168,4 @@ The code was originally tested on an Ubuntu 22.04.03 system but should be compat
 
 HAVE FUN and if you have found our codes useful in your research, please remember to cite our work using the following reference:
 
-REF:
+Raphael Bühler, Max Schütz, Karla F. Andriani, Marcos G. Quiles, João Paulo A. de Mendonça, Vivianne K. Ocampo-Restrepo, Christian Gemel, Juarez L. F. Da Silva, Roland A. Fischer. **Living Libraries of Mixed Metal Clusters** (2024).
