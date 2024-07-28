@@ -145,7 +145,7 @@ Module responsable to distribute the ligands around the selected binary cores. T
   <div style="flex: 1; padding: 20px;">
 
 <p align="center">
-<img src="/misc/flowchart.png" alt="writing_time" width="100"/>
+<img src="/misc/flowchart_2.pdf" alt="writing_time" width="100"/>
 </p>
 
   </div>
