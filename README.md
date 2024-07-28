@@ -122,8 +122,6 @@ The file `parameters.json` has to be set-up for each specific use case. This is 
 We recommend that inexperienced users keep advanced parameters set to their `default` values. However, all parameters can be adjusted as needed. 
 
 ## Modules
-<!-- <div style="display: flex; justify-content: space-between;">
-  <div style="flex: 2; padding: 0px;"> -->
 
 ### Module 0 - MOD0
 This module is a *k*-means clustering tool to select the representatives unary cores, binary cores, and complexes. This module uses the eigenvalues of the Coulomb matrix of the provided structures to select a set of representative ones.
@@ -141,19 +139,7 @@ Module responsable to distribute the ligands around the selected binary cores. T
 *NOTE:* Energy calculations must be done externally and can be automated using appropriate quantum chemistry software such as FHI-aims, CREST, VASP, or ADF.
 
 
-  <!-- </div>
-  <div style="flex: 1; padding: 20px;"> -->
-
-
 ![Flowchart](/misc/flowchart_2.png)
-
-<!-- <p align="center">
-<img src="/misc/flowchart_2.png" alt="writing_time" width="100"/>
-</p> -->
-
-  <!-- </div>
-</div> -->
-
 
 ## Example
 
