@@ -159,4 +159,4 @@ The code was originally tested on an Ubuntu 22.04.03 system but should be compat
 
 HAVE FUN and if you have found our codes useful in your research, please remember to cite our work using the following reference:
 
-Raphael Bühler, Max Schütz, Karla F. Andriani, Marcos G. Quiles, João Paulo A. de Mendonça, Vivianne K. Ocampo-Restrepo, Christian Gemel, Juarez L. F. Da Silva, Roland A. Fischer. **Living Libraries of Mixed Metal Clusters** (2024).
+Raphael Bühler, Max Schütz, Karla F. Andriani, Marcos G. Quiles, João Paulo A. de Mendonça, Vivianne K. Ocampo-Restrepo, Johannes Stephan, Sophia Ling, Samia Kahlal, Jean-Yves Saillard, Christian Gemel, Juarez L. F. Da Silva, Roland A. Fischer. **Living Libraries of Mixed Metal Clusters** (2024).
