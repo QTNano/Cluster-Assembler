@@ -41,9 +41,8 @@ To begin, clone or download this repository and install [Anaconda](https://www.a
 ```shell
 $ conda env create -f environment.yml
 ```
-Executing this command will generate a new Anaconda virtual environment equipped with all the dependencies needed to run the Cluster-Assembler toolbox.
+Executing this command will generate a new Anaconda virtual environment equipped with all the dependencies needed to run the Cluster-Assembler toolbox. Installing Cluster-Assembler with Anaconda is straightforward and takes just a few minutes on a regular computer.
 
-Installing Cluster-Assembler with Anaconda is straightforward and takes just a few minutes on a regular computer.
 ---
 
 ## Execution
